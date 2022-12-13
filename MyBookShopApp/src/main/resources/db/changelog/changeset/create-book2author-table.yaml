@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: book2author
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: author_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: book_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sort_index
+                  type: INT
+                  constraints:
+                    nullable: false

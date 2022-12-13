@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: book2genre
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: book_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: genre_id
+                  type: INT
+                  constraints:
+                    nullable: false

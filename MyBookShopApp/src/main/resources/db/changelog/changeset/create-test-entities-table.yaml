@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 18
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: test_entities
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: data
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

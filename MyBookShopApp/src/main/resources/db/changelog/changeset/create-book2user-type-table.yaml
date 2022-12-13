@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: book2user_type
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

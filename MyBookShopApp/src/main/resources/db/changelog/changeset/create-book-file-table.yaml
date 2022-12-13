@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: book_file
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: hash
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: path
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

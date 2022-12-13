@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 16
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: user_contact
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: approved
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: code
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: code_time
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: true
+              - column:
+                  name: code_trails
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: contact
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false

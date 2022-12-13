@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 10
+      author: adminAdmin
+      changes:
+        - createTable:
+            tableName: book_review_like
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: review_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: time
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: value
+                  type: INT
+                  constraints:
+                    nullable: false
